@@ -1,0 +1,99 @@
+# SaaS Frontend Monorepo
+
+Welcome to the documentation for our scalable SaaS frontend monorepo built with Turborepo, Next.js, and TypeScript.
+
+## Overview
+
+This monorepo contains everything needed to build and deploy a modern SaaS application:
+
+### 📦 Packages
+
+- **`@repo/ui`** - Shared React components built with TailwindCSS
+- **`@repo/hooks`** - Reusable React hooks and utilities
+- **`@repo/lib`** - Business logic, types, and state management (Zustand)
+- **`@repo/config`** - Shared configurations (ESLint, Prettier, Tailwind, TypeScript)
+
+### 🚀 Applications
+
+- **`web`** - Main web application (Next.js)
+- **`pwa`** - Progressive Web App version 
+- **`docs`** - Documentation site (Nextra)
+- **`storybook`** - Component documentation and testing
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
+
+Start all applications in development mode:
+
+```bash
+npm run dev
+```
+
+Or start individual applications:
+
+```bash
+# Web app (port 3000)
+cd apps/web && npm run dev
+
+# Documentation (port 3001)
+cd apps/docs && npm run dev
+
+# Storybook (port 6006)
+cd apps/storybook && npm run storybook
+```
+
+### Building
+
+Build all applications:
+
+```bash
+npm run build
+```
+
+## Architecture
+
+This monorepo follows a modular architecture with shared packages and independent applications:
+
+```
+├── apps/
+│   ├── web/           # Main Next.js application
+│   ├── pwa/           # PWA version
+│   ├── docs/          # Nextra documentation
+│   └── storybook/     # Component stories
+├── packages/
+│   ├── ui/            # Shared React components
+│   ├── hooks/         # Custom React hooks
+│   ├── lib/           # Business logic & types
+│   └── config/        # Shared configurations
+└── package.json       # Root package.json with workspaces
+```
+
+## Key Features
+
+- 🏗️ **Turborepo** for build system and caching
+- 🎨 **TailwindCSS** for styling with shared design tokens
+- 📝 **TypeScript** with strict type checking
+- 🧪 **Storybook** for component development and testing
+- 🔧 **ESLint & Prettier** for code quality
+- 🪝 **Husky & lint-staged** for pre-commit hooks
+- 🗂️ **Zustand** for state management
+- 📱 **Responsive** design out of the box
+
+## Next Steps
+
+- [Component Library](/components) - Explore available UI components
+- [State Management](/state) - Learn about Zustand stores
+- [Development Guide](/development) - Detailed development workflow
+- [Deployment](/deployment) - How to deploy applications
