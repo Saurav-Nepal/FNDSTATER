@@ -1,0 +1,9 @@
+{
+  "extends": "@repo/config/tsconfig",
+  "include": [
+    "../stories/**/*",
+    "../src/**/*",
+    "../../packages/ui/src/**/*"
+  ],
+  "exclude": ["node_modules"]
+}
